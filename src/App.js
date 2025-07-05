@@ -2,9 +2,9 @@ import React from 'react';
 import './App.css';
 
 const companyLogos = {
-  Workday: 'https://upload.wikimedia.org/wikipedia/commons/4/4d/Workday_Logo.png',
-  Amazon: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg',
-  Nokia: 'https://upload.wikimedia.org/wikipedia/commons/0/0a/Nokia_wordmark.svg',
+  Workday: 'https://logo.clearbit.com/workday.com',
+  Amazon: 'https://logo.clearbit.com/amazon.com',
+  Nokia: 'https://logo.clearbit.com/nokia.com',
 };
 
 function App() {
@@ -43,6 +43,10 @@ function App() {
           <p>
             I excel in delivering top-tier software for millions of users. Skilled in the full development cycle, from requirements to maintenance, I also lead teams and conduct interviews, boasting expertise in multiple programming languages and technologies.
           </p>
+          <p>In my free time, I enjoy creating little apps that solve real-world problems:</p>
+          <ul>
+            <li><strong>Wedding Speech Website</strong> - <a href="https://wedding-speech.onrender.com/" target="_blank" rel="noopener noreferrer">wedding-speech.onrender.com</a> - Built for my wedding ceremony to help international guests from Poland and Hong Kong who didn't speak English fluently. The multilingual platform allows users to record the currently spoken speech fragment and automatically redirects them to the corresponding section on the website, making the ceremony accessible to everyone regardless of language barriers.</li>
+          </ul>
         </section>
 
         <section style={{ marginBottom: '2rem' }}>
@@ -50,7 +54,17 @@ function App() {
           <div className="experience-list">
             {/* Workday */}
             <div className="experience-card">
-              <img src={companyLogos.Workday} alt="Workday logo" className="company-logo" />
+              <a href="https://www.workday.com" target="_blank" rel="noopener noreferrer">
+                <img 
+                  src={companyLogos.Workday} 
+                  alt="Workday logo" 
+                  className="company-logo"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'block';
+                  }}
+                />
+              </a>
               <div className="experience-details">
                 <h4>Workday</h4>
                 <div className="exp-title"><strong>Senior Software Engineer</strong> &mdash; May 2024 – Present | Vancouver, BC, Canada</div>
@@ -64,7 +78,17 @@ function App() {
             </div>
             {/* Amazon */}
             <div className="experience-card">
-              <img src={companyLogos.Amazon} alt="Amazon logo" className="company-logo" />
+              <a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer">
+                <img 
+                  src={companyLogos.Amazon} 
+                  alt="Amazon logo" 
+                  className="company-logo"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'block';
+                  }}
+                />
+              </a>
               <div className="experience-details">
                 <h4>Amazon</h4>
                 <div className="exp-title"><strong>Software Engineer II</strong> &mdash; April 2021 – March 2024 | Vancouver, BC, Canada</div>
@@ -88,7 +112,17 @@ function App() {
             </div>
             {/* Nokia */}
             <div className="experience-card">
-              <img src={companyLogos.Nokia} alt="Nokia logo" className="company-logo" />
+              <a href="https://www.nokia.com" target="_blank" rel="noopener noreferrer">
+                <img 
+                  src={companyLogos.Nokia} 
+                  alt="Nokia logo" 
+                  className="company-logo"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'block';
+                  }}
+                />
+              </a>
               <div className="experience-details">
                 <h4>Nokia</h4>
                 <div className="exp-title"><strong>Software Engineer</strong> &mdash; September 2014 – August 2017 | Wrocław, Poland</div>
